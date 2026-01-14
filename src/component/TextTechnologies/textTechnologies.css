@@ -1,0 +1,35 @@
+.techConteiner{
+    display: inline-flex;
+    width: auto;
+    align-items: center;
+    justify-content: start;
+}
+.technologies{
+    font-family: var(--font-one);
+    font-size: 22px;
+    color: var(--text-color-one);
+    display: inline-flex;
+    position: relative;
+    font-size: 20px;
+    padding: 0px 5px;
+
+}
+.techActive::after{
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    right:-2px;
+    top: 0%;
+    border-left:2px solid var(--color-thre);
+    animation: typing 0.8s ease-out  infinite forwards;
+}
+@keyframes typing {
+  0%{ border-left:2px solid transparent}
+  100%{ border-left:2px solid var(--color-thre)}
+}
+@media (max-width: 850px) {
+  .technologies {
+    font-size: 14px;
+  }
+}

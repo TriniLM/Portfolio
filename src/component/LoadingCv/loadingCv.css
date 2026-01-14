@@ -1,0 +1,74 @@
+.downloadCv{
+    width: 140px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    color: var(--text-color-two);
+    font-weight:550;
+    font-size: 15px;
+    font-family: var(--font-two);
+    position: relative;
+    overflow: hidden;
+    transform: scaleY(1);
+    transition: all ease 0.3s;
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: var(--text-color-thre);
+}
+.static:hover{
+    scale: 1.1;
+    background-color: var(--text-color-one);
+}
+.staticText{
+    display: inline-block;
+    visibility: hidden;
+}
+.static .staticText{
+    visibility: visible;
+}
+.loading{
+    position: relative;
+    animation: loadingScale 0.9s ease  forwards ;
+
+}
+@keyframes loadingScale {
+    0%{transform: scaleY(0);}
+    10%{transform: scaleY(1.2);}
+    40%{transform: scaleY(0.3);}
+    100%{transform: scaleY(0.3);}
+}
+.loading::after{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 50px;
+    top: -5px;
+    left:0px;
+    background-color: var(--color-thre);
+    background: #044570;
+    background: linear-gradient(90deg, rgba(4, 69, 112, 1) 0%, rgba(64, 162, 227, 1) 100%);    
+    animation: traslateLoading 5s ease-out 0.2s  forwards ;
+}
+@keyframes traslateLoading {
+    0%{width:0%;}
+    100%{width: 101%;}
+}
+.completed{
+    transform: scaleY(1);
+}
+.textSweet{
+    color:var(--text-color-one);
+    font-family: var(--font-one);
+    font-weight: lighter;
+    font-size: 30px;
+    visibility: hidden;
+    animation: scaleSweetText 0.4s .3s ease-in  forwards;
+}
+
+@keyframes scaleSweetText {
+    0%{transform: scale(0.6); visibility: visible;}
+    50%{transform: scale(1.1); visibility: visible;}
+    100%{transform: scale(1); visibility: visible;}
+}
+.swal2-icon.swal2-success {
+    border-color: var(--color-one) !important;
+}

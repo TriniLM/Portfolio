@@ -1,0 +1,164 @@
+    .banner{
+        position: relative;
+        max-width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        overflow: hidden;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .bannerText{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        padding: 10px;
+        position: relative;
+        z-index: 2;
+        color:var(--text-color-one);
+    }
+    .bannerText::before{
+        content: "";
+        width: 250px;
+        height: 250px;
+        border-radius: 100%;
+        background-color: var(--color-one);
+        position: absolute;
+        left: -10px;
+        top:50px;
+        opacity: 0.1;
+        animation: orbitar 10s alternate infinite forwards;
+        z-index: -1;
+        filter: blur(50px);
+        animation: orbitar 10s alternate-reverse infinite forwards;
+
+    }
+    .textConteiner{
+        font-size: clamp(3rem, 10vw, 2rem);
+        font-family: var(--font-one);
+        line-height: 40px;
+        font-weight:lighter;
+        letter-spacing:1px;
+    }
+    .textConteiner .fullStack{
+        color: var(--color-one);
+        text-shadow: 0px 0px 3px #6fdd00a6;
+    }
+    .bannerHand{
+        display: inline-block;
+        font-size: 40px;
+        animation: waveHand 3s ease-in-out infinite;
+        animation-delay: 3s;
+    }
+    span{
+        display: inline-block;
+    }
+    @keyframes waveHand {
+    0%   { transform: rotate(0deg); }
+    10%  { transform: rotate(15deg); }
+    20%  { transform: rotate(-10deg); }
+    30%  { transform: rotate(10deg); }
+    40%  { transform: rotate(-5deg); }
+    50%  { transform: rotate(5deg); }
+    60% { transform: rotate(0deg); }
+    70% { transform: rotate(0deg); }
+    80% { transform: rotate(0deg); }
+    90% { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+    }
+    .textNetworks{
+        display: flex;
+        gap: 10px;
+        font-size: 25px;
+        color: var(--text-color-one);
+    }
+    .textNetworks a{
+        width: 130px;
+        display: inline-block;
+        color: var(--text-color-thre);
+        background-color: var(--bg-one-variation);
+        border-radius: 5px;
+        transition: all ease 0.5s;
+        display: flex;
+        align-items: center;
+        padding:5px 15px;
+        text-decoration: none;
+    }
+    .textNetworks span{
+        font-size: 15px;
+        font-family: var(--font-two);
+        font-weight: 600;
+        margin-left: 10px;
+    }
+    .textNetworks a:hover{
+        animation: networksAnimation 0.8s ease-in-out forwards;
+    }
+    .Linkedin:hover{
+        background-color: #0e76a8;
+        color: var(--text-color-one);
+        transition: color ease 0.1s;
+    }
+    .github:hover, .tiktok:hover{
+        background-color: var(--text-color-one);
+        color: var(--bg-one-variation);
+    }
+    .instagram:hover{
+        background: #833AB4;
+        background: linear-gradient(234deg, rgba(131, 58, 180, 1) 11%, rgba(253, 29, 29, 1) 58%, rgba(252, 176, 69, 1) 100%);
+        color:var(--text-color-one);
+    }
+    @keyframes networksAnimation {
+    0%   { transform: rotate(0deg); }
+    15%  { transform: rotate(10deg); }
+    30%  { transform: rotate(-5deg); }
+    45%  { transform: rotate(5deg); }
+    60%  { transform: rotate(0deg); }
+    75%  { transform: rotate(0deg); }
+    90% { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+
+    }
+    .bannerParallax{
+        position:relative;
+        display: flex;
+        justify-content: center;
+        width: 50%;
+        min-width: 350px;
+    }
+    .parallaxTechnologies{
+        padding: 20px 40px;
+        background-color:var(--bg-one-variation);
+        position: absolute;
+        bottom: 35px;
+        z-index: 3;
+        border-radius:8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: var(--font-two);
+        color: var(--text-color-thre);
+        font-weight: 500;
+        transform: translate(-1%);
+        font-size:20px;
+        width: 500px;
+    }
+    @keyframes orbitar {
+    from {
+        transform: rotate(0deg) translateX(0px) rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg) translateX(5px) rotate(-360deg);
+    }
+    }
+
+@media (max-width: 850px) {
+  .parallaxTechnologies {
+    font-size: 12px;
+    padding: 10px 20px;
+    width: 300px;
+  }
+
+}

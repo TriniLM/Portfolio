@@ -1,0 +1,9 @@
+.header{
+    max-width: 100%;
+    background-color: transparent;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0px;
+    z-index: 111;
+    backdrop-filter: blur(3px);
+}

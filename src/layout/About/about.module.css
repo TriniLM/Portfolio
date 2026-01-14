@@ -1,0 +1,37 @@
+.about{
+    max-width: 100%;
+    padding: 20px;
+    min-height: 600px;
+    font-size: 14px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    z-index: 11;
+}
+
+.aboutText{
+    color: var(--text-color-one);
+    max-width: 420px;
+    font-family: var(--font-two);
+    position:relative;
+    transform: translateY(-30px);
+    font-weight: 400;
+}
+.title{
+    font-family: var(--font-one);
+    font-size: 60px;
+    font-weight: 400;
+    color: var(--color-one);
+    margin-bottom: 10px;
+    position: relative;
+}
+.aboutImage{
+    flex-basis: 50%;
+    min-width: 500px;
+    position: relative;
+    top: -100px;
+    transform: translateY(100px);
+}

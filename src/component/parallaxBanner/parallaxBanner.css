@@ -1,0 +1,37 @@
+.parallax-container {
+  width: 700px;
+  display: grid;
+  grid-template-areas: "stack";
+  z-index: 2;
+  position:relative;
+}
+.parallax-container::after{
+    content: "";
+    width: 175px;
+    height: 175px;
+    border-radius: 100%;
+    background-color: var(--color-two);
+    position: absolute;
+    right: 450px;
+    top: 170px;
+    z-index: -1;
+    filter:blur(60px);
+    opacity: 0.5;
+}
+.parallax-container img {
+  width: 100%;
+  grid-area: stack;
+  animation-delay: 0.3s;
+}
+.parallax-one{
+   animation: orbitar 15s alternate infinite forwards;
+   perspective: 600px;
+}
+.parallax-two{
+ animation: orbitar 10s alternate forwards infinite;
+  perspective: 400px;
+}
+.parallax-thre{
+   animation: orbitar 7s alternate infinite forwards;
+   perspective: 100px;
+}

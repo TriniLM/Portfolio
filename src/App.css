@@ -1,0 +1,11 @@
+.main{
+    width: 100%;
+    max-width: 1250px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.conteiner{
+    height: 2000px;
+}

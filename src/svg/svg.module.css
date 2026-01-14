@@ -1,0 +1,21 @@
+.movile{
+width: 90%;
+visibility: visible;
+position: absolute;
+display: none;
+}
+.desktop{
+  width: 90%;
+  position: relative;
+  z-index: 11;
+  max-width: 1000px;
+}
+
+@media screen and (max-width:800px) {
+  .desktop{
+    display: none;
+  }
+  .movile{
+    display: block;
+  }
+}
