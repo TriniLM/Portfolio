@@ -11,7 +11,7 @@ useGSAP(()=>{
   return (
     <header className={styles.header}>
       <div ref={elementRef}>
-        <img src='/Logo.png' width={50} height={50} alt='logo' className="logo"/>
+        <img  src={`${import.meta.env.BASE_URL}Logo.png`} width={50} height={50} alt='logo' className="logo"/>
       </div>
     </header>
   )
